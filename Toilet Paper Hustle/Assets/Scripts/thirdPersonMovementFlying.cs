@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class thirdPersonMovementFlying : MonoBehaviour
 {
-    public float forwardSpeed = 25f,
+    public float 
+        forwardSpeed = 25f,
         strafeSpeed = 10f, 
         hoverSpeed = 5f;
 
