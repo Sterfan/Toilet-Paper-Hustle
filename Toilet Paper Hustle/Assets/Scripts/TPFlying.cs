@@ -30,7 +30,7 @@ public class TPFlying : MonoBehaviour
             float targetAngleY = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angleY = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngleY, ref turnSmoothVelocity, turnSmoothTime);
 
-            float targetAngleX = cam.eulerAngles.x - camRotation;
+            float targetAngleX = cam.eulerAngles.x + camRotation;
             float angleX = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngleX, ref turnSmoothVelocity, turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(angleX, angleY, 0f);
