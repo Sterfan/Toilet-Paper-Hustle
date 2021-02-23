@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceShipTest : MonoBehaviour
 {
@@ -73,6 +74,12 @@ public class SpaceShipTest : MonoBehaviour
         transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
 
         Interact();
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            OpenDDLR();
+            Debug.Log("Opened");
+        }
     }
     void CheckMouseX()
     {
@@ -144,5 +151,10 @@ public class SpaceShipTest : MonoBehaviour
         pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
         pickedUpObject.transform.SetParent(null);
         pickedUpObject = null;
+    }
+
+    void OpenDDLR()
+    {
+        SceneManager.LoadScene("Axel's Scene", LoadSceneMode.Additive);
     }
 }
