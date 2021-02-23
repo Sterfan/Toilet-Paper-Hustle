@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 23980673}
   - component: {fileID: 23980672}
   - component: {fileID: 23980671}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24258229}
   - component: {fileID: 24258231}
-  - component: {fileID: 24258230}
+  - component: {fileID: 24258232}
   m_Layer: 0
   m_Name: ThirdPersonPlayer
   m_TagString: Player
@@ -253,24 +253,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!114 &24258230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24258228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6190bfde25cf7a744aa0cae1ec775d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardSpeed: 25
-  strafeSpeed: 10
-  hoverSpeed: 5
-  lookRotateSpeed: 90
-  rollSpeed: 90
-  rollAcceleration: 3.5
 --- !u!143 &24258231
 CharacterController:
   m_ObjectHideFlags: 0
@@ -289,6 +271,29 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &24258232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24258228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a887674649c0b2643917ac615e78f971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardSpeed: 40
+  strafeSpeed: 30
+  hoverSpeed: 5
+  lookRotateSpeed: 150
+  rollSpeed: 90
+  rollAcceleration: 6
+  maxAngle: 60
+  deadZoneX: 160
+  deadZoneY: 90
+  slowSpeed: 40
+  range: 5
 --- !u!1 &121573101
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +324,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &121573103
@@ -496,7 +501,7 @@ GameObject:
   - component: {fileID: 203990509}
   - component: {fileID: 203990508}
   - component: {fileID: 203990507}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +598,7 @@ GameObject:
   - component: {fileID: 212327873}
   - component: {fileID: 212327872}
   - component: {fileID: 212327871}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +926,7 @@ GameObject:
   - component: {fileID: 612885576}
   - component: {fileID: 612885575}
   - component: {fileID: 612885574}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1145,7 @@ GameObject:
   - component: {fileID: 811141731}
   - component: {fileID: 811141730}
   - component: {fileID: 811141729}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1241,7 @@ GameObject:
   - component: {fileID: 944667870}
   - component: {fileID: 944667869}
   - component: {fileID: 944667868}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1623,7 @@ GameObject:
   - component: {fileID: 1276894014}
   - component: {fileID: 1276894013}
   - component: {fileID: 1276894012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1774,7 @@ GameObject:
   - component: {fileID: 1459430660}
   - component: {fileID: 1459430659}
   - component: {fileID: 1459430658}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GFX Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1875,7 @@ GameObject:
   - component: {fileID: 1470309821}
   - component: {fileID: 1470309820}
   - component: {fileID: 1470309819}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2079,7 +2084,7 @@ GameObject:
   - component: {fileID: 1675982317}
   - component: {fileID: 1675982316}
   - component: {fileID: 1675982315}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,7 +2186,7 @@ GameObject:
   - component: {fileID: 1682290137}
   - component: {fileID: 1682290136}
   - component: {fileID: 1682290135}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2308,7 +2313,7 @@ GameObject:
   - component: {fileID: 1787813953}
   - component: {fileID: 1787813952}
   - component: {fileID: 1787813951}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2391,6 +2396,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787813949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1846223345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b0974163f3238204bb19fff3c666bf35, type: 3}
+  m_PrefabInstance: {fileID: 1633165735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1846223346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846223345}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1846223347
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846223345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6692290496178104961, guid: b0974163f3238204bb19fff3c666bf35, type: 3}
 --- !u!1001 &1871675522
 PrefabInstance:
   m_ObjectHideFlags: 0
