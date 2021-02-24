@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7545302834971982249}
   - component: {fileID: 6852674776244139532}
   - component: {fileID: 8718230208863224518}
+  - component: {fileID: -4827767040266351701}
+  - component: {fileID: 8821016130673966739}
   m_Layer: 0
   m_Name: Book2V1
   m_TagString: Untagged
@@ -81,3 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-4827767040266351701
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205086911704130323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2905487, y: 3.7835608, z: 4.7158084}
+  m_Center: {x: 0, y: 0.04186374, z: 2.2704074}
+--- !u!54 &8821016130673966739
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205086911704130323}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
