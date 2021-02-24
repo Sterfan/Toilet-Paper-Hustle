@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1333500319673185225}
   - component: {fileID: 2679167807101500524}
   - component: {fileID: 201157460782909606}
+  - component: {fileID: 7833094871156455191}
   m_Layer: 0
   m_Name: Closed2DoorSinkCounter
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7833094871156455191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858398767289280883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.233541, y: 5.392787, z: 6.026053}
+  m_Center: {x: -0.021086693, y: -0.12161648, z: 3.0268734}
 --- !u!1001 &858025783803951421
 PrefabInstance:
   m_ObjectHideFlags: 0
