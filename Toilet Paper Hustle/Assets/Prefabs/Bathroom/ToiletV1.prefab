@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1982055779258509457}
   - component: {fileID: 4351984065925504091}
   - component: {fileID: 4503601442191799701}
+  - component: {fileID: 4152803497879504356}
+  - component: {fileID: 611080559011012684}
   m_Layer: 0
   m_Name: ToiletV1
   m_TagString: Untagged
@@ -93,5 +95,31 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.7299771, y: 4.8750734, z: 6.302776}
-  m_Center: {x: 0.097931206, y: -0.14544037, z: 3.1583545}
+  m_Size: {x: 3.1700377, y: 4.8750734, z: 0.41980115}
+  m_Center: {x: 0.014200449, y: -0.14544034, z: 2.9836094}
+--- !u!65 &4152803497879504356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838857672127282574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7299771, y: 1.2410755, z: 3.8799584}
+  m_Center: {x: 0.09793115, y: 1.6715587, z: 4.3697634}
+--- !u!65 &611080559011012684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838857672127282574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1700377, y: 4.0319586, z: 2.788871}
+  m_Center: {x: 0.014200449, y: 0.27611732, z: 1.4184327}

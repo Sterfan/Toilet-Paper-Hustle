@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6233813350768541139}
   - component: {fileID: 7002305375553352310}
   - component: {fileID: 5100846553795036860}
-  - component: {fileID: 3421554256163651538}
   - component: {fileID: -3410761875599933309}
+  - component: {fileID: 645584468070565687}
   m_Layer: 0
   m_Name: GlassV1
   m_TagString: Untagged
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3421554256163651538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6757972961737910121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6362909, y: 1.636291, z: 2}
-  m_Center: {x: 0.00000011920929, y: 0.000000029802322, z: 1.0163429}
 --- !u!54 &-3410761875599933309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,3 +99,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &645584468070565687
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757972961737910121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.62014556
+  m_Height: 2.0746717
+  m_Direction: 2
+  m_Center: {x: 0.00000011920929, y: 0, z: 1.0490069}
