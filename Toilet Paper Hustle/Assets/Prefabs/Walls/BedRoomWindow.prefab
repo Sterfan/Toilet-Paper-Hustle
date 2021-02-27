@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6879360989330257138
+--- !u!1 &8598785319177834578
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6067394280073588296}
-  - component: {fileID: 7177732194432639469}
-  - component: {fileID: 4933862919044207911}
-  - component: {fileID: -7970452600213053768}
-  - component: {fileID: 8080490852711201555}
+  - component: {fileID: 8943820226705754856}
+  - component: {fileID: 5454156606869538125}
+  - component: {fileID: 7806420135230566791}
+  - component: {fileID: 3562277669538373531}
   m_Layer: 0
-  m_Name: GlassV2
+  m_Name: BedRoomWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6067394280073588296
+--- !u!4 &8943820226705754856
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879360989330257138}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 8598785319177834578}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -131.00008, y: 0.000005722046, z: 47.16684}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7177732194432639469
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!33 &5454156606869538125
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879360989330257138}
-  m_Mesh: {fileID: -9146618070568788744, guid: 1a1e3a734a40b034981ff056c33d7de8, type: 3}
---- !u!23 &4933862919044207911
+  m_GameObject: {fileID: 8598785319177834578}
+  m_Mesh: {fileID: -5495902117074765545, guid: 493746e589d9ff4419249b85f829f616, type: 3}
+--- !u!23 &7806420135230566791
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879360989330257138}
+  m_GameObject: {fileID: 8598785319177834578}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +60,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 1a1e3a734a40b034981ff056c33d7de8, type: 3}
+  - {fileID: -6478536213147159724, guid: 493746e589d9ff4419249b85f829f616, type: 3}
+  - {fileID: -876546973899608171, guid: 493746e589d9ff4419249b85f829f616, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,33 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &-7970452600213053768
-Rigidbody:
+--- !u!65 &3562277669538373531
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879360989330257138}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &8080490852711201555
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6879360989330257138}
+  m_GameObject: {fileID: 8598785319177834578}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62014556
-  m_Height: 2.0746717
-  m_Direction: 2
-  m_Center: {x: 0.00000011920929, y: 0, z: 1.0490069}
+  serializedVersion: 2
+  m_Size: {x: 29, y: 2, z: 28.999998}
+  m_Center: {x: 0, y: 0, z: 14.503816}

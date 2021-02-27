@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6139953106677622582}
   - component: {fileID: 8273545277441545212}
   - component: {fileID: -5192174940705840112}
+  - component: {fileID: 8060951713382464322}
+  - component: {fileID: 5532366475062311272}
   m_Layer: 0
   m_Name: OvenClosedV1
   m_TagString: Untagged
@@ -93,5 +95,31 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.14956, y: 5.7723465, z: 6.586212}
-  m_Center: {x: 0, y: -0.31139314, z: 3.302937}
+  m_Size: {x: 5.14956, y: 5.164753, z: 5.1314845}
+  m_Center: {x: -0, y: -0.007596493, z: 2.5755732}
+--- !u!65 &8060951713382464322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625005283570102825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.7982416, y: 0.7193184, z: 0.25522685}
+  m_Center: {x: 0.002289772, y: -2.840314, z: 3.7525225}
+--- !u!65 &5532366475062311272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625005283570102825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.14956, y: 0.53869057, z: 1.4635706}
+  m_Center: {x: 0, y: 2.3054347, z: 5.8719993}
