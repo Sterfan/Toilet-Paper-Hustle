@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpaceShipTest : MonoBehaviour
+public class SpaceShipRB : MonoBehaviour
 {
     public float 
         forwardSpeed = 25f,
@@ -38,10 +38,16 @@ public class SpaceShipTest : MonoBehaviour
 
     GameObject pickedUpObject;
 
+    Rigidbody rb;
+
+    Animator animator;
+
     void Start()
     {
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -55,13 +61,14 @@ public class SpaceShipTest : MonoBehaviour
 
         mouseDistance = Vector2.ClampMagnitude(mouseDistance, 1f);
 
-        transform.Rotate(mouseDistance.y * lookRotateSpeed * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f, Space.Self);
+        //transform.Rotate(mouseDistance.y * lookRotateSpeed * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f, Space.Self);
 
 
 
-        xRotation = transform.localEulerAngles.x;
-        xRotation = Mathf.Clamp((xRotation <= 180) ? xRotation : -(360 - xRotation), -maxAngle, maxAngle);
-        transform.localEulerAngles = new Vector3(xRotation, transform.localEulerAngles.y, 0f);
+
+        //xRotation = transform.localEulerAngles.x;
+        //xRotation = Mathf.Clamp((xRotation <= 180) ? xRotation : -(360 - xRotation), -maxAngle, maxAngle);
+        //transform.localEulerAngles = new Vector3(xRotation, transform.localEulerAngles.y, 0f);
 
 
 
@@ -69,9 +76,11 @@ public class SpaceShipTest : MonoBehaviour
         activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
         activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
 
-        transform.position += -transform.forward * activeForwardSpeed * Time.deltaTime;
-        transform.position += -transform.right * activeStrafeSpeed * Time.deltaTime;
-        transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+        //transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+        //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
+        //transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+
+
 
         Interact();
 
@@ -81,6 +90,17 @@ public class SpaceShipTest : MonoBehaviour
             Debug.Log("Opened");
         }
     }
+
+    private void FixedUpdate()
+    {
+        Vector3 currentRotation = rb.rotation.eulerAngles;
+        currentRotation.x = Mathf.Clamp((currentRotation.x <= 180) ? currentRotation.x : -(360 - currentRotation.x), -maxAngle, maxAngle);
+        rb.MoveRotation(Quaternion.Euler(currentRotation.x + mouseDistance.y * lookRotateSpeed, currentRotation.y + mouseDistance.x * lookRotateSpeed, 0f));
+        rb.AddForce(-transform.forward.normalized * activeForwardSpeed);
+        rb.AddForce(-transform.right.normalized * activeStrafeSpeed);
+        rb.AddForce(transform.up.normalized * activeHoverSpeed);
+    }
+
     void CheckMouseX()
     {
         if (lookInput.x < screenCenter.x - deadZoneX)
@@ -115,14 +135,22 @@ public class SpaceShipTest : MonoBehaviour
 
     void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && CheckIfObjectInteractable() != null)
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            pickedUpObject = CheckIfObjectInteractable();
-            PickUp(pickedUpObject);
+            animator.SetBool("Grab", true);
+            if (CheckIfObjectInteractable() != null)
+            {
+                pickedUpObject = CheckIfObjectInteractable();
+                PickUp(pickedUpObject);
+            }
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0) && pickedUpObject != null)
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            Drop();
+            animator.SetBool("Grab", false);
+            if (pickedUpObject != null)
+            {
+                Drop();
+            }
         }
 
     }
@@ -138,11 +166,11 @@ public class SpaceShipTest : MonoBehaviour
         return null;
     }
 
-    void PickUp(GameObject gameObject)
+    void PickUp(GameObject pickUp)
     {
-        gameObject.GetComponent<Rigidbody>().useGravity = false;
-        gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        gameObject.transform.SetParent(transform);
+        pickUp.GetComponent<Rigidbody>().useGravity = false;
+        pickUp.GetComponent<Rigidbody>().isKinematic = true;
+        pickUp.transform.SetParent(transform);
     }
 
     void Drop()
