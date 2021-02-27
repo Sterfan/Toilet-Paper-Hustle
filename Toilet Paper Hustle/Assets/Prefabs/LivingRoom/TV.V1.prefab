@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2042457478431851249}
   - component: {fileID: 4304512193968584251}
   - component: {fileID: 7410131876283248853}
+  - component: {fileID: 4275829757307217733}
   m_Layer: 0
   m_Name: TV.V1
   m_TagString: Untagged
@@ -94,5 +95,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7931564, y: 2.2629457, z: 2.1047475}
-  m_Center: {x: 0, y: -0.5316985, z: 0.96150845}
+  m_Size: {x: 2.7931564, y: 1.1363794, z: 2.1047475}
+  m_Center: {x: 0, y: 0.031585734, z: 0.96150845}
+--- !u!65 &4275829757307217733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358847683973224430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7384677, y: 1.0884267, z: 1.7213968}
+  m_Center: {x: 0.004461527, y: -1.0884457, z: 0.7698328}
