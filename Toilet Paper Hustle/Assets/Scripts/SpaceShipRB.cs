@@ -44,47 +44,71 @@ public class SpaceShipRB : MonoBehaviour
 
     FixedJoint joint;
 
+    bool DDLR = false, frozen = false;
+
+    float lookAcceleration = 10f;
+
+    [HideInInspector]
+    public float stability = 0.3f, speed = 2.0f;
+
+
     void Start()
     {
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        SetBaseConstraints();
     }
 
     // Update is called once per frame
     void Update()
     {
-        lookInput.x = Input.mousePosition.x;
-        lookInput.y = Input.mousePosition.y;
+        if (!DDLR)
+        {
+            lookInput.x = Input.mousePosition.x;
+            lookInput.y = Input.mousePosition.y;
 
-        CheckMouseX();
-        CheckMouseY();
+            CheckMouseX();
+            CheckMouseY();
 
-        mouseDistance = Vector2.ClampMagnitude(mouseDistance, 1f);
+            mouseDistance = Vector2.ClampMagnitude(mouseDistance, 1f);
 
-        //transform.Rotate(mouseDistance.y * lookRotateSpeed * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f, Space.Self);
-
-
-
-
-        //xRotation = transform.localEulerAngles.x;
-        //xRotation = Mathf.Clamp((xRotation <= 180) ? xRotation : -(360 - xRotation), -maxAngle, maxAngle);
-        //transform.localEulerAngles = new Vector3(xRotation, transform.localEulerAngles.y, 0f);
+            //transform.Rotate(mouseDistance.y * lookRotateSpeed * Time.deltaTime, mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f, Space.Self);
 
 
 
-        activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
-        activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
-        activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
 
-        //transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
-        //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
-        //transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
+            //xRotation = transform.localEulerAngles.x;
+            //xRotation = Mathf.Clamp((xRotation <= 180) ? xRotation : -(360 - xRotation), -maxAngle, maxAngle);
+            //transform.localEulerAngles = new Vector3(xRotation, transform.localEulerAngles.y, 0f);
+
+            Vector3 currentRotation = rb.rotation.eulerAngles;
+            currentRotation.x = Mathf.Clamp((currentRotation.x <= 180) ? currentRotation.x : -(360 - currentRotation.x), -maxAngle, maxAngle);
+            rb.MoveRotation(Quaternion.Euler(currentRotation.x + mouseDistance.y * lookRotateSpeed * Time.deltaTime, currentRotation.y + mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f));
+
+            activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
+            activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
+            activeHoverSpeed = Mathf.Lerp(activeHoverSpeed, Input.GetAxisRaw("Hover") * hoverSpeed, hoverAcceleration * Time.deltaTime);
+
+            //transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
+            //transform.position += transform.right * activeStrafeSpeed * Time.deltaTime;
+            //transform.position += transform.up * activeHoverSpeed * Time.deltaTime;
 
 
 
-        Interact();
+            Interact();
+            CheckForDDLR();
+        }
+
+        if (DDLR)
+        {
+            mouseDistance = new Vector2(0f, 0f);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                CloseDDLR();
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -93,14 +117,29 @@ public class SpaceShipRB : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
-        Vector3 currentRotation = rb.rotation.eulerAngles;
-        currentRotation.x = Mathf.Clamp((currentRotation.x <= 180) ? currentRotation.x : -(360 - currentRotation.x), -maxAngle, maxAngle);
-        rb.MoveRotation(Quaternion.Euler(currentRotation.x + mouseDistance.y * lookRotateSpeed, currentRotation.y + mouseDistance.x * lookRotateSpeed, 0f));
-        rb.AddForce(-transform.forward.normalized * activeForwardSpeed);
-        rb.AddForce(-transform.right.normalized * activeStrafeSpeed);
-        rb.AddForce(transform.up.normalized * activeHoverSpeed);
+        if (!DDLR)
+        {
+            ////Vector3 yaw = transform.up * mouseDistance.x * lookRotateSpeed;
+            ////Vector3 pitch = transform.right * mouseDistance.y * lookRotateSpeed;
+            ////rb.AddTorque(yaw + pitch, ForceMode.Acceleration);
+            //float zRotation = Mathf.Deg2Rad * currentRotation.x;
+            //Vector3 currentTorque = transform.InverseTransformDirection(rb.angularVelocity);
+            //currentTorque.x = Mathf.MoveTowards(currentTorque.x, mouseDistance.y * lookRotateSpeed, lookAcceleration * Time.deltaTime);
+            //currentTorque.y = Mathf.MoveTowards(currentTorque.y, mouseDistance.x * lookRotateSpeed, lookAcceleration * Time.deltaTime);
+            ////currentTorque.z = Mathf.MoveTowards(currentTorque.z, 0f, lookAcceleration * Time.deltaTime);
+            ////currentTorque.z = 0f;
+            ////currentTorque.z = FixZRotation();
+            //currentTorque = transform.TransformDirection(currentTorque);
+            //rb.angularVelocity = currentTorque;
+            //FixZRotation();
+            rb.AddForce(-transform.forward.normalized * activeForwardSpeed, ForceMode.Acceleration);
+            rb.AddForce(-transform.right.normalized * activeStrafeSpeed, ForceMode.Acceleration);
+            //rb.AddForce(transform.up.normalized * activeHoverSpeed, ForceMode.Acceleration);
+            rb.AddForce(new Vector3(0f, 1f, 0f) * activeHoverSpeed, ForceMode.Acceleration);
+        }
     }
 
     void CheckMouseX()
@@ -173,9 +212,13 @@ public class SpaceShipRB : MonoBehaviour
         //pickUp.GetComponent<Rigidbody>().useGravity = false;
         //pickUp.GetComponent<Rigidbody>().isKinematic = true;
         //pickUp.transform.SetParent(transform);
-        pickUp.AddComponent<FixedJoint>();
-        joint = pickUp.GetComponent<FixedJoint>();
+        
+        joint = pickUp.AddComponent<FixedJoint>();
         joint.connectedBody = rb;
+        if (pickUp.CompareTag("Door"))
+        {
+            rb.constraints = RigidbodyConstraints.None;
+        }
     }
 
     void Drop()
@@ -184,11 +227,75 @@ public class SpaceShipRB : MonoBehaviour
         //pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
         //pickedUpObject.transform.SetParent(null);
         //pickedUpObject = null;
+        SetBaseConstraints();
         Destroy(joint);
+        animator.SetBool("Grab", false);
     }
 
+    void CheckForDDLR()
+    {
+        if (pickedUpObject != null && pickedUpObject.tag == "DDLR")
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                OpenDDLR();
+            }
+        }
+    }
+
+    void FreezePosAndRot()
+    {
+        if (frozen)
+        {
+            SetBaseConstraints();
+            if (pickedUpObject != null)
+            {
+                pickedUpObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            }
+            return;
+        }
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        pickedUpObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+        frozen = true;
+    }
     void OpenDDLR()
     {
+        FreezePosAndRot();
         SceneManager.LoadScene("Axel's Scene", LoadSceneMode.Additive);
+        DDLR = true;
+    }
+
+    private void CloseDDLR()
+    {
+        SceneManager.UnloadSceneAsync(1);
+        FreezePosAndRot();
+        DDLR = false;
+        Drop();
+    }
+
+    void FixZRotation()
+    {
+        //var delta = Quaternion.Euler(0, 0, 0) * Quaternion.Inverse(rb.rotation);
+        //float angle; Vector3 axis;
+        //delta.ToAngleAxis(out angle, out axis);
+        //if (float.IsInfinity(axis.x))
+        //    return 0;
+        //if (angle > 180f)
+        //    angle -= 360f;
+        //Vector3 angular = (0.9f * Mathf.Deg2Rad * angle / 4) * axis.normalized;
+        //return angular.z;
+        Vector3 predictedUp = Quaternion.AngleAxis(
+         rb.angularVelocity.magnitude * Mathf.Rad2Deg * stability / speed,
+         rb.angularVelocity) * transform.up;
+
+        Vector3 torqueVector = Vector3.Cross(predictedUp, Vector3.up);
+        torqueVector = Vector3.Project(torqueVector, transform.forward);
+        rb.AddTorque(torqueVector * speed * speed);
+    }
+
+    void SetBaseConstraints()
+    {
+        rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationX;
     }
 }
