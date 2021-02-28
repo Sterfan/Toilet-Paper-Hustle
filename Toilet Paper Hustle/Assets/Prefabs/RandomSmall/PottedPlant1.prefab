@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6593776687005213064}
   - component: {fileID: 7795193720659095085}
   - component: {fileID: 5461423971434846951}
+  - component: {fileID: 8463350022196574539}
   m_Layer: 0
   m_Name: PottedPlant1
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8463350022196574539
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821496644415454002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3705666
+  m_Height: 4.7
+  m_Direction: 2
+  m_Center: {x: -0.036563873, y: 0.00043547153, z: 1.26}
