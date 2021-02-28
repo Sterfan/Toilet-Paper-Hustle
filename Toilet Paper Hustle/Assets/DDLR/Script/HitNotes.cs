@@ -266,6 +266,7 @@ public class HitNotes : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Time.timeScale = 1f;
+                SceneManager.UnloadSceneAsync(1);
                 SceneManager.LoadScene("Axel's Scene", LoadSceneMode.Additive);
             }
         }

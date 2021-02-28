@@ -100,20 +100,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!64 &1475718275639733088
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5436805001513149014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4128563218347521063, guid: e08e12bcc99afa34ab7b6377ca64c132, type: 3}
 --- !u!54 &6104495016270383139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,6 +116,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1475718275639733088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5436805001513149014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4128563218347521063, guid: e08e12bcc99afa34ab7b6377ca64c132, type: 3}
 --- !u!59 &2493384862332218783
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -182,6 +182,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1849015078263106592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400136386954003579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -832273908347492427, guid: fa1d0d4730166084b8dd08a6acccd700, type: 3}
 --- !u!59 &8319631425124398857
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -218,20 +232,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!64 &1849015078263106592
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8400136386954003579}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -832273908347492427, guid: fa1d0d4730166084b8dd08a6acccd700, type: 3}
 --- !u!1001 &5166192298212400903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,6 +298,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e08e12bcc99afa34ab7b6377ca64c132, type: 3}
       propertyPath: m_Name
       value: FridgeDoorV1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e08e12bcc99afa34ab7b6377ca64c132, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e08e12bcc99afa34ab7b6377ca64c132, type: 3}
@@ -377,6 +381,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fa1d0d4730166084b8dd08a6acccd700, type: 3}
       propertyPath: m_Name
       value: FridgeFreezerDoorV1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa1d0d4730166084b8dd08a6acccd700, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa1d0d4730166084b8dd08a6acccd700, type: 3}
