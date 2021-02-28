@@ -42,6 +42,8 @@ public class SpaceShipRB : MonoBehaviour
 
     Animator animator;
 
+    FixedJoint joint;
+
     void Start()
     {
         screenCenter.x = Screen.width * .5f;
@@ -168,17 +170,21 @@ public class SpaceShipRB : MonoBehaviour
 
     void PickUp(GameObject pickUp)
     {
-        pickUp.GetComponent<Rigidbody>().useGravity = false;
-        pickUp.GetComponent<Rigidbody>().isKinematic = true;
-        pickUp.transform.SetParent(transform);
+        //pickUp.GetComponent<Rigidbody>().useGravity = false;
+        //pickUp.GetComponent<Rigidbody>().isKinematic = true;
+        //pickUp.transform.SetParent(transform);
+        pickUp.AddComponent<FixedJoint>();
+        joint = pickUp.GetComponent<FixedJoint>();
+        joint.connectedBody = rb;
     }
 
     void Drop()
     {
-        pickedUpObject.GetComponent<Rigidbody>().useGravity = true;
-        pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
-        pickedUpObject.transform.SetParent(null);
-        pickedUpObject = null;
+        //pickedUpObject.GetComponent<Rigidbody>().useGravity = true;
+        //pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
+        //pickedUpObject.transform.SetParent(null);
+        //pickedUpObject = null;
+        Destroy(joint);
     }
 
     void OpenDDLR()
