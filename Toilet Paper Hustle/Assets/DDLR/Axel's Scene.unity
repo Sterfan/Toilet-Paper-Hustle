@@ -6797,6 +6797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failSafeMode: 0
+  audioManager: {fileID: 2063500528}
   backgroundBeat: {fileID: 1068886901}
   nonPaintedSprites: {fileID: 1518333561}
   tryAgain: {fileID: 1022106459}
@@ -14724,7 +14725,7 @@ GameObject:
   - component: {fileID: 2063500529}
   - component: {fileID: 2063500528}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioManagerDDLR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

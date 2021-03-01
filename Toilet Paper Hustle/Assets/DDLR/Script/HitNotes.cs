@@ -10,7 +10,7 @@ public class HitNotes : MonoBehaviour
 
     public bool failSafeMode = false;
 
-    AudioManager audioManager;
+    public AudioManager audioManager;
 
     [SerializeField]
     AudioSource backgroundBeat;
@@ -95,7 +95,6 @@ public class HitNotes : MonoBehaviour
             hitKeys[i] = false;
         }
         spriteCycler = FindObjectOfType<SpriteCycle>();
-        audioManager = FindObjectOfType<AudioManager>();
         tickTime = spriteCycler.tickTime;
     }
 

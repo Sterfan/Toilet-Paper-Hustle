@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DDLR
   - Door
+  - Wall
+  - Hangable
   layers:
   - Default
   - TransparentFX
