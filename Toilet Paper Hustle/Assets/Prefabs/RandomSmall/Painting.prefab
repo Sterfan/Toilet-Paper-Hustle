@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 287659279254531230}
   - component: {fileID: 2601127709402683476}
   - component: {fileID: 3229715912769703213}
+  - component: {fileID: 2164867477250118952}
   m_Layer: 0
   m_Name: Painting
   m_TagString: Untagged
@@ -95,3 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.09725, y: 0.36867967, z: 4.864599}
   m_Center: {x: 0, y: 0.07719163, z: 0}
+--- !u!54 &2164867477250118952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546933231633627521}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
