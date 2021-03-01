@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5461423971434846951}
   - component: {fileID: 8463350022196574539}
   - component: {fileID: 1354190889557057317}
+  - component: {fileID: 686682113970690545}
   m_Layer: 0
   m_Name: PottedPlant1
   m_TagString: Untagged
@@ -94,7 +95,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 1.3705666
-  m_Height: 4.7
+  m_Height: 4.46
   m_Direction: 2
   m_Center: {x: -0.036563873, y: 0.00043547153, z: 1.26}
 --- !u!54 &1354190889557057317
@@ -112,4 +113,17 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!65 &686682113970690545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821496644415454002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.626236, y: 1.7546718, z: 0.5919508}
+  m_Center: {x: 0.027580261, y: 0.006299287, z: -0.70402527}

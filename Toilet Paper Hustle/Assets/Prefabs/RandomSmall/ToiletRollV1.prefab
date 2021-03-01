@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8019302300459533918}
   - component: {fileID: 6405688089881217531}
   - component: {fileID: 9151706044668509489}
-  - component: {fileID: 5027884695517681727}
   - component: {fileID: 6787640493325921909}
+  - component: {fileID: 3803611923893876813}
   m_Layer: 0
   m_Name: ToiletRollV1
   m_TagString: Untagged
@@ -83,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5027884695517681727
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7206208386250923236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.7817211
-  m_Height: 4.225383
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.045412302, z: 1.7435608}
 --- !u!54 &6787640493325921909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,4 +98,18 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!64 &3803611923893876813
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206208386250923236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3390558720134950976, guid: 7f39b22dba8364c47b181fd6cf0fa681, type: 3}
