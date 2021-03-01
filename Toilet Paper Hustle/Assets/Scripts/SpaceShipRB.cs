@@ -237,6 +237,10 @@ public class SpaceShipRB : MonoBehaviour
         {
             stopRotation = true;
         }
+        if (pickUp.GetComponent<AudioCue>())
+        {
+            pickUp.GetComponent<AudioCue>().pickedUp = true;
+        }
     }
 
     void Drop()
@@ -248,6 +252,10 @@ public class SpaceShipRB : MonoBehaviour
         if (pickedUpObject.CompareTag("Hangable"))
         {
             pickedUpObject.GetComponent<Hangable>().dropped = true;
+        }
+        if (pickedUpObject.GetComponent<AudioCue>())
+        {
+            pickedUpObject.GetComponent<AudioCue>().pickedUp = false;
         }
         SetBaseConstraints();
         Destroy(joint);
@@ -332,7 +340,7 @@ public class SpaceShipRB : MonoBehaviour
             if (manboyCooldown > 10f)
             {
                 Debug.Log("Checked");
-                int rand = Random.Range(1, manboyProb);
+                int rand = Random.Range(1, manboyProb + 1);
                 if (rand == 1)
                 {
                     audioManager.PlaySound("Manboy");
