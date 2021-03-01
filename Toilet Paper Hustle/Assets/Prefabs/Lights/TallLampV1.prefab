@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 6880263056358034526}
   - component: {fileID: 6233417652461419503}
   - component: {fileID: 5332820650832183549}
+  - component: {fileID: 545425172152672576}
   m_Layer: 0
   m_Name: TallLampV1
   m_TagString: Untagged
@@ -328,3 +329,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.275913
   m_Center: {x: 0.07656765, y: 0.0047289133, z: 8.684023}
+--- !u!114 &545425172152672576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881832464224477220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: f3dcda15102729e4e943d4d489d3a565, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 3
+  cooldown: 1

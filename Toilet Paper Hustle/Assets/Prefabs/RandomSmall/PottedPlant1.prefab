@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8463350022196574539}
   - component: {fileID: 1354190889557057317}
   - component: {fileID: 686682113970690545}
+  - component: {fileID: -1188382246216586320}
   m_Layer: 0
   m_Name: PottedPlant1
   m_TagString: Untagged
@@ -127,3 +128,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.626236, y: 1.7546718, z: 0.5919508}
   m_Center: {x: 0.027580261, y: 0.006299287, z: -0.70402527}
+--- !u!114 &-1188382246216586320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821496644415454002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 61aed845f78400147b44b93d9b663aaf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 8300000, guid: 6992db818503a704a90927b468b2afa4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 2
+  cooldown: 1
