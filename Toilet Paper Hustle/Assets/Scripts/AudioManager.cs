@@ -25,4 +25,10 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
+    public void PlaySound(int index)
+    {
+        Sound s = sounds[index];
+        s.source.Play();
+    }
+
 }

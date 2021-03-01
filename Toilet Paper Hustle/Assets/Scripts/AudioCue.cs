@@ -10,6 +10,9 @@ public class AudioCue : MonoBehaviour
     bool added = false;
 
     public int probabilityToPlay = 3;
+    //public int timesToPlay = 2;
+    public int cooldown = 1;
+    int timesSincePlayed;
 
     int tracksPlayed = 0;
     int pickCounter = 0;
@@ -32,6 +35,7 @@ public class AudioCue : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        timesSincePlayed = cooldown;
     }
 
     // Update is called once per frame
@@ -41,7 +45,14 @@ public class AudioCue : MonoBehaviour
         {
             if (!added)
             {
-                PlayAudio(CheckProbability());
+                if (timesSincePlayed >= cooldown)
+                {
+                    PlayAudio(CheckProbability());
+                }
+                else
+                {
+                    timesSincePlayed++;
+                }
                 pickCounter += 1;
                 added = true;
             }
@@ -69,10 +80,15 @@ public class AudioCue : MonoBehaviour
             Sound s = sounds[tracksPlayed];
             s.source.Play();
             tracksPlayed++;
+            timesSincePlayed = 0;
             if (tracksPlayed > sounds.Length)
             {
                 tracksPlayed = 0;
             }
+        }
+        else
+        {
+            timesSincePlayed++;
         }
     }
 }

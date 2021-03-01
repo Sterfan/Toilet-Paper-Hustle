@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8029326089957099353}
   - component: {fileID: 9198833577570149423}
   - component: {fileID: 5419667483830102330}
+  - component: {fileID: 4408260177135205184}
   m_Layer: 0
   m_Name: ClockV1
   m_TagString: Hangable
@@ -143,3 +144,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropped: 0
+  fruit: 0
+--- !u!114 &4408260177135205184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711246812360261788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Clockjoke
+    clip: {fileID: 8300000, guid: d28a44cfdb9d0ca4cb38727bcac520cd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 3
+  cooldown: 1
