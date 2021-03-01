@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4254761441481708082}
   - component: {fileID: 7914187917717635330}
   - component: {fileID: 5691580476959671908}
+  - component: {fileID: 5380811364738393485}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5380811364738393485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3456464251881116566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3666322, y: 0.8295361, z: 26.207827}
+  m_Center: {x: 19.259796, y: -0.08279111, z: -0.49238226}
 --- !u!1 &5691285384879133424
 GameObject:
   m_ObjectHideFlags: 0
