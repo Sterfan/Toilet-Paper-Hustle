@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4824889889229602322}
   - component: {fileID: 4509487960826686030}
   - component: {fileID: 4202358671684461512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FridgeDoorV1
   m_TagString: Door
   m_Icon: {fileID: 0}
