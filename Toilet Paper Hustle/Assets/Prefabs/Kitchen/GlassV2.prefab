@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7177732194432639469}
   - component: {fileID: 4933862919044207911}
   - component: {fileID: -7970452600213053768}
-  - component: {fileID: 8080490852711201555}
+  - component: {fileID: 3141289545449007497}
   m_Layer: 0
   m_Name: GlassV2
   m_TagString: Untagged
@@ -98,9 +98,9 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &8080490852711201555
-CapsuleCollider:
+  m_CollisionDetection: 1
+--- !u!64 &3141289545449007497
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +109,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.62014556
-  m_Height: 2.0746717
-  m_Direction: 2
-  m_Center: {x: 0.00000011920929, y: 0, z: 1.0490069}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9146618070568788744, guid: 1a1e3a734a40b034981ff056c33d7de8, type: 3}
