@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -5175345703875888373}
   - component: {fileID: 8029326089957099353}
   - component: {fileID: 9198833577570149423}
+  - component: {fileID: 5419667483830102330}
   m_Layer: 0
   m_Name: ClockV1
-  m_TagString: Untagged
+  m_TagString: Hangable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,9 +124,22 @@ FixedJoint:
   m_GameObject: {fileID: 2711246812360261788}
   m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: 1200
+  m_BreakForce: 1350
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5419667483830102330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711246812360261788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5310470b40bbf84995867966dfdcb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropped: 0
