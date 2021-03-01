@@ -69,6 +69,10 @@ public class AudioCue : MonoBehaviour
             Sound s = sounds[tracksPlayed];
             s.source.Play();
             tracksPlayed++;
+            if (tracksPlayed > sounds.Length)
+            {
+                tracksPlayed = 0;
+            }
         }
     }
 }
