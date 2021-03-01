@@ -10,6 +10,8 @@ public class SpaceShipRB : MonoBehaviour
         strafeSpeed = 10f, 
         hoverSpeed = 5f;
 
+    public AudioManager audioManager;
+
     public float lookRotateSpeed = 90f;
     private Vector2 lookInput, screenCenter, mouseDistance;
 
@@ -47,6 +49,9 @@ public class SpaceShipRB : MonoBehaviour
     bool DDLR = false, frozen = false;
 
     float lookAcceleration = 10f;
+
+    float manboyCooldown = 5f, manboyTimer = 0f;
+    int manboyProb = 30;
 
     [HideInInspector]
     public float stability = 0.3f, speed = 2.0f;
@@ -139,6 +144,9 @@ public class SpaceShipRB : MonoBehaviour
             rb.AddForce(-transform.right.normalized * activeStrafeSpeed, ForceMode.Acceleration);
             //rb.AddForce(transform.up.normalized * activeHoverSpeed, ForceMode.Acceleration);
             rb.AddForce(new Vector3(0f, 1f, 0f) * activeHoverSpeed, ForceMode.Acceleration);
+
+            CheckIfManboy();
+
         }
     }
 
@@ -272,6 +280,7 @@ public class SpaceShipRB : MonoBehaviour
         FreezePosAndRot();
         DDLR = false;
         Drop();
+        audioManager.PlaySound("Screw this game");
     }
 
     void FixZRotation()
@@ -297,5 +306,27 @@ public class SpaceShipRB : MonoBehaviour
     void SetBaseConstraints()
     {
         rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationX;
+    }
+
+    void CheckIfManboy()
+    {
+        manboyTimer += Time.deltaTime;
+        manboyCooldown += Time.deltaTime;
+        if (manboyTimer > 2f)
+        {
+            if (manboyCooldown > 10f)
+            {
+                Debug.Log("Checked");
+                int rand = Random.Range(1, manboyProb);
+                if (rand == 1)
+                {
+                    audioManager.PlaySound("Manboy");
+                    manboyCooldown = 0f;
+                    manboyProb *= 2;
+                }
+            }
+
+            manboyTimer = 0f;
+        }
     }
 }
