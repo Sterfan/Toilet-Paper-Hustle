@@ -56,6 +56,10 @@ public class SpaceShipRB : MonoBehaviour
     [HideInInspector]
     public float stability = 0.3f, speed = 2.0f;
 
+    bool stopRotation = false;
+
+    public int maxMass = 40;
+
 
     void Start()
     {
@@ -87,10 +91,12 @@ public class SpaceShipRB : MonoBehaviour
             //xRotation = transform.localEulerAngles.x;
             //xRotation = Mathf.Clamp((xRotation <= 180) ? xRotation : -(360 - xRotation), -maxAngle, maxAngle);
             //transform.localEulerAngles = new Vector3(xRotation, transform.localEulerAngles.y, 0f);
-
-            Vector3 currentRotation = rb.rotation.eulerAngles;
-            currentRotation.x = Mathf.Clamp((currentRotation.x <= 180) ? currentRotation.x : -(360 - currentRotation.x), -maxAngle, maxAngle);
-            rb.MoveRotation(Quaternion.Euler(currentRotation.x + mouseDistance.y * lookRotateSpeed * Time.deltaTime, currentRotation.y + mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f));
+            if (!stopRotation)
+            {
+                Vector3 currentRotation = rb.rotation.eulerAngles;
+                currentRotation.x = Mathf.Clamp((currentRotation.x <= 180) ? currentRotation.x : -(360 - currentRotation.x), -maxAngle, maxAngle);
+                rb.MoveRotation(Quaternion.Euler(currentRotation.x + mouseDistance.y * lookRotateSpeed * Time.deltaTime, currentRotation.y + mouseDistance.x * lookRotateSpeed * Time.deltaTime, 0f));
+            }
 
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
             activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxisRaw("Horizontal") * strafeSpeed, strafeAcceleration * Time.deltaTime);
@@ -227,6 +233,10 @@ public class SpaceShipRB : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.None;
         }
+        if (pickUp.GetComponent<Rigidbody>().mass >= maxMass)
+        {
+            stopRotation = true;
+        }
     }
 
     void Drop()
@@ -235,9 +245,14 @@ public class SpaceShipRB : MonoBehaviour
         //pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
         //pickedUpObject.transform.SetParent(null);
         //pickedUpObject = null;
+        if (pickedUpObject.CompareTag("Hangable"))
+        {
+            pickedUpObject.GetComponent<Hangable>().dropped = true;
+        }
         SetBaseConstraints();
         Destroy(joint);
         animator.SetBool("Grab", false);
+        stopRotation = false;
     }
 
     void CheckForDDLR()
@@ -329,4 +344,6 @@ public class SpaceShipRB : MonoBehaviour
             manboyTimer = 0f;
         }
     }
+
+
 }
