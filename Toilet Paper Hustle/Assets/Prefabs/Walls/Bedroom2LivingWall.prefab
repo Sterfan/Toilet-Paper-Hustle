@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1431623127409503235}
   - component: {fileID: 3763552366107482313}
   - component: {fileID: 3505734196676982807}
+  - component: {fileID: 792162573531046327}
   m_Layer: 0
   m_Name: Bedroom2LivingWall
   m_TagString: Untagged
@@ -95,3 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 24.999998, y: 1, z: 24.999998}
   m_Center: {x: 0, y: 0, z: 12.503289}
+--- !u!54 &792162573531046327
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403083732721432860}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
