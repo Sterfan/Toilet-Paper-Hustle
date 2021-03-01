@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2164629339684039249}
   - component: {fileID: 3000969100081915380}
   - component: {fileID: 1027210177345917246}
+  - component: {fileID: -911009720890346375}
   m_Layer: 0
   m_Name: CeilingLightV1
   m_TagString: Untagged
@@ -82,6 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-911009720890346375
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531679375877026027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 2fa3c21cec06f8a44880221eb9b075b3, type: 3}
 --- !u!1 &4718297953588679243
 GameObject:
   m_ObjectHideFlags: 0

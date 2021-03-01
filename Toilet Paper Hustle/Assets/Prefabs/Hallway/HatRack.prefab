@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8453470792970499385}
   - component: {fileID: 7570960916582820588}
   - component: {fileID: 2873104898627919480}
-  - component: {fileID: 7827582985451169015}
   m_Layer: 0
   m_Name: HatRack
   m_TagString: Untagged
