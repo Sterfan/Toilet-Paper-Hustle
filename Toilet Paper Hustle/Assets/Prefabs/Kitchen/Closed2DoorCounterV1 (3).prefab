@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1420489256894928516}
   - component: {fileID: -8032023012635750515}
   - component: {fileID: 3950068274272713277}
+  - component: {fileID: 326370716105810212}
   m_Layer: 0
   m_Name: Closed2DoorCounterV1 (3)
   m_TagString: Untagged
@@ -109,3 +110,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.180116, y: 0.5273967, z: 1.961874}
   m_Center: {x: 0.005625963, y: 2.3163016, z: 5.0790625}
+--- !u!54 &326370716105810212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627806862096774993}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1891304482393230698}
   - component: {fileID: 4457354366163614112}
   - component: {fileID: -4025573987275730521}
+  - component: {fileID: 4824889889229602322}
   m_Layer: 0
   m_Name: FridgeDoorV1
   m_TagString: Door
@@ -93,5 +94,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.9690123, y: 0.9835253, z: 6.0836596}
-  m_Center: {x: 0, y: -0.18217243, z: 0}
+  m_Size: {x: 4.9690123, y: 0.5885266, z: 6.0836596}
+  m_Center: {x: 0, y: 0.015326917, z: 0}
+--- !u!65 &4824889889229602322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2799911162569316469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37489614, y: 0.38271272, z: 1.6277852}
+  m_Center: {x: -1.85, y: -0.5, z: 1.7}

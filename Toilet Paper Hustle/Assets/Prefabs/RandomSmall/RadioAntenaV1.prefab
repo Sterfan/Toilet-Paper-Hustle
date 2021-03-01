@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6524483176666440879}
   - component: {fileID: 7864487217274039050}
   - component: {fileID: 5386501130004520896}
-  - component: {fileID: 7292876776898143327}
   m_Layer: 0
   m_Name: RadioAntenaV1
   m_TagString: Untagged
@@ -82,16 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7292876776898143327
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5890794405530926613}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08103643, y: 0.081036456, z: 2.1340194}
-  m_Center: {x: 9.7144515e-17, y: 0.000000001541125, z: 0.043153703}
