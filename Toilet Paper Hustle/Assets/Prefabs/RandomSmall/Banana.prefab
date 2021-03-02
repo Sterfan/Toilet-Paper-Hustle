@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: GrabApple
+  - name: GrabBanana
     clip: {fileID: 8300000, guid: 8c5730ba0d5f6d046ab660dfe7521aa6, type: 3}
     volume: 1
     pitch: 1
