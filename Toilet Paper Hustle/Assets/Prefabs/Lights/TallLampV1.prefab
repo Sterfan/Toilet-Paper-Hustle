@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
+  - name: GrabLamp
     clip: {fileID: 8300000, guid: f3dcda15102729e4e943d4d489d3a565, type: 3}
     volume: 1
     pitch: 1
