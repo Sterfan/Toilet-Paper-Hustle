@@ -39,6 +39,8 @@ public class SpaceShipRB : MonoBehaviour
     public float range = 5f;
 
     GameObject pickedUpObject;
+    [HideInInspector]
+    public string objectTag;
 
     Rigidbody rb;
 
@@ -229,6 +231,7 @@ public class SpaceShipRB : MonoBehaviour
         
         joint = pickUp.AddComponent<FixedJoint>();
         joint.connectedBody = rb;
+        objectTag = pickUp.tag;
         if (pickUp.CompareTag("Door"))
         {
             rb.constraints = RigidbodyConstraints.None;

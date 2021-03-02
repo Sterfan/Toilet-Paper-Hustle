@@ -6834,21 +6834,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8788812414121958079, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788812414121958079, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.43
+      objectReference: {fileID: 0}
     - target: {fileID: 9111515618027123726, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9111515618027123726, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.2
+      value: 16.44
       objectReference: {fileID: 0}
     - target: {fileID: 9111515618027123726, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.63
+      value: 4.69
       objectReference: {fileID: 0}
     - target: {fileID: 9111515618027123726, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.04
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9111515618027123726, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6883,6 +6891,10 @@ PrefabInstance:
       value: Prefab for hand with camera included
       objectReference: {fileID: 0}
     - target: {fileID: 9111515618732227926, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111515618732227926, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 264144637}
@@ -6912,6 +6924,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+--- !u!1 &996323516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9111515618539317506, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+  m_PrefabInstance: {fileID: 996323515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &996323517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9111515618732227926, guid: 380d114b660081f4ea04dbdebf8ce1d7, type: 3}
+  m_PrefabInstance: {fileID: 996323515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cc83bb3cb9b3b4097fbcb24e84336a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &997019704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6986,6 +7014,7 @@ GameObject:
   - component: {fileID: 1000898417}
   - component: {fileID: 1000898415}
   - component: {fileID: 1000898416}
+  - component: {fileID: 1000898419}
   m_Layer: 0
   m_Name: CutSceneCam1
   m_TagString: Untagged
@@ -7162,6 +7191,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 17.714, y: 75.564, z: 0}
+--- !u!81 &1000898419
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000898414}
+  m_Enabled: 1
 --- !u!1001 &1004833680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7863,6 +7900,8 @@ MonoBehaviour:
   Cam1: {fileID: 1000898414}
   Cam2: {fileID: 1526963405}
   Cam3: {fileID: 1831040015}
+  handScript: {fileID: 996323517}
+  mainCamera: {fileID: 996323516}
 --- !u!4 &1150109014
 Transform:
   m_ObjectHideFlags: 0
@@ -10288,6 +10327,7 @@ GameObject:
   - component: {fileID: 1526963408}
   - component: {fileID: 1526963407}
   - component: {fileID: 1526963406}
+  - component: {fileID: 1526963410}
   m_Layer: 0
   m_Name: CutSceneCam2
   m_TagString: Untagged
@@ -10464,6 +10504,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -7.599, y: 43.056, z: 0}
+--- !u!81 &1526963410
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526963405}
+  m_Enabled: 1
 --- !u!1001 &1533503051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12387,6 +12435,7 @@ GameObject:
   - component: {fileID: 1831040018}
   - component: {fileID: 1831040017}
   - component: {fileID: 1831040016}
+  - component: {fileID: 1831040020}
   m_Layer: 0
   m_Name: CutSceneCam3
   m_TagString: Untagged
@@ -12563,6 +12612,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 8.766, y: -71.921, z: 0}
+--- !u!81 &1831040020
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831040015}
+  m_Enabled: 1
 --- !u!1001 &1837636024
 PrefabInstance:
   m_ObjectHideFlags: 0
