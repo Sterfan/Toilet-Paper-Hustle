@@ -2471,6 +2471,20 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: WinTP
+    clip: {fileID: 8300000, guid: 20a8218cd74f7be4b9d4d161e373ab65, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: TowelToButt
+    clip: {fileID: 8300000, guid: 690f5090b0da1b647b8ce6d358917f54, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
 --- !u!4 &209055304
 Transform:
   m_ObjectHideFlags: 0
@@ -2724,6 +2738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 209055303}
+  destroyOnPlay: 0
   soundID: 2
 --- !u!65 &251519234
 BoxCollider:
@@ -8074,6 +8089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 209055303}
+  destroyOnPlay: 0
   soundID: 4
 --- !u!64 &833213811
 MeshCollider:
@@ -15889,6 +15905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 209055303}
+  destroyOnPlay: 0
   soundID: 3
 --- !u!65 &1758434852
 BoxCollider:

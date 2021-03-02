@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 900603298470478089}
   m_Layer: 0
   m_Name: ToiletRollV1
-  m_TagString: Untagged
+  m_TagString: TP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   pickedUp: 0
   probabilityToPlay: 1
