@@ -133,10 +133,11 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   pickedUp: 0
-  probabilityToPlay: 2
-  cooldown: 1
+  probabilityToPlay: 1
+  cooldown: 3
 --- !u!65 &8414328278005493562
 BoxCollider:
   m_ObjectHideFlags: 0

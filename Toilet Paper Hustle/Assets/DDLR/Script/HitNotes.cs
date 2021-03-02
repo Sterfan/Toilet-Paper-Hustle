@@ -87,6 +87,8 @@ public class HitNotes : MonoBehaviour
 
     bool[] hitKeys = new bool[4];
 
+    bool played1000DDLR = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -367,6 +369,7 @@ public class HitNotes : MonoBehaviour
                 {
                     backgroundBeat.Stop();
                     audioManager.PlaySound("Try Again");
+                    audioManager.PlaySound("DDLRLose");
                     playAgainSound = true;
                 }
                 //Time.timeScale = 0f;
@@ -426,6 +429,11 @@ public class HitNotes : MonoBehaviour
     void AddScore()
     {
         score += scorePerHit * multiplier;
+        if (score >= 1000 && !played1000DDLR)
+        {
+            audioManager.PlaySound("DDLR1000");
+            played1000DDLR = true;
+        }
     }
 
     void CheckNotesToHit()

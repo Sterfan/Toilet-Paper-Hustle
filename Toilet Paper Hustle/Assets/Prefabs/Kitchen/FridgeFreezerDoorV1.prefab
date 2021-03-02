@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9002549295711725508}
   - component: {fileID: 7831283700980264402}
   - component: {fileID: 4012569983651183056}
+  - component: {fileID: -4167896011814324421}
   m_Layer: 0
   m_Name: FridgeFreezerDoorV1
   m_TagString: Door
@@ -163,3 +164,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37489614, y: 0.38271272, z: 1.6277852}
   m_Center: {x: 0.0017099828, y: 0.12007302, z: 0}
+--- !u!114 &-4167896011814324421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434016646289014127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 2e0b42d2f6bd55849b36f1f11131f60f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 3
