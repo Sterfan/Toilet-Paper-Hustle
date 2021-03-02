@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6383243501272608011}
   - component: {fileID: 5759203119287547395}
   - component: {fileID: 1369638794511213808}
+  - component: {fileID: -8431747442736454046}
   m_Layer: 0
   m_Name: TallPlant
   m_TagString: Untagged
@@ -127,3 +128,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1036959, y: 1.9124641, z: 0.51603323}
   m_Center: {x: -0.0149927735, y: -0.06173706, z: 0.35824773}
+--- !u!114 &-8431747442736454046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974121375912907031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GrabPlant2
+    clip: {fileID: 8300000, guid: 6992db818503a704a90927b468b2afa4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GrabPlant1
+    clip: {fileID: 8300000, guid: 61aed845f78400147b44b93d9b663aaf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 2
+  cooldown: 1

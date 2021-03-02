@@ -16,12 +16,19 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            s.source.playOnAwake = s.playOnAwake;
         }
     }
 
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Play();
+    }
+
+    public void PlaySound(int index)
+    {
+        Sound s = sounds[index];
         s.source.Play();
     }
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5487840214577553289}
   - component: {fileID: 4076074454417922955}
   - component: {fileID: 4958185059704026307}
+  - component: {fileID: 8724601400152558048}
   m_Layer: 0
   m_Name: TopHat
   m_TagString: Untagged
@@ -113,3 +114,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 6e5023fc3d41cbb458ff060932fcecc0, type: 3}
+--- !u!114 &8724601400152558048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280346548929838684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GrabHat
+    clip: {fileID: 8300000, guid: b97a8544f845d4e429836cba7279a669, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 3

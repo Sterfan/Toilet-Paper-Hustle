@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7178573844481016149}
   - component: {fileID: 7682149488156885679}
   - component: {fileID: 3916442936944398025}
+  - component: {fileID: 5785215659927266116}
   m_Layer: 0
   m_Name: Guitar
   m_TagString: Untagged
@@ -126,3 +127,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.65498006, y: 0.3614567, z: 3.4828105}
   m_Center: {x: -0.011518437, y: 0.17459969, z: 6.4355335}
+--- !u!114 &5785215659927266116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436194811294805007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GrabGuitar
+    clip: {fileID: 8300000, guid: c060ab90a48b4c54980131e8dfce5a9e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 2

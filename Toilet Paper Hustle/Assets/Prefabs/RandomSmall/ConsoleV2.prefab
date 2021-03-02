@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6733317004319010912}
   - component: {fileID: -3008139636629742119}
   - component: {fileID: 7714679109377434031}
+  - component: {fileID: 8710928409974336473}
   m_Layer: 0
   m_Name: ConsoleV2
   m_TagString: DDLR
@@ -112,3 +113,25 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &8710928409974336473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075961762112049589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: DDLR pickup
+    clip: {fileID: 8300000, guid: 8d19d8a70b0287e44acacde92fe22c37, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 3
+  cooldown: 1
