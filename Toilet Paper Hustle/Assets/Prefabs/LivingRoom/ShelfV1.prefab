@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
+  - name: GrabShelf
     clip: {fileID: 8300000, guid: 105f5ee85639d454494ea24ef265c11c, type: 3}
     volume: 1
     pitch: 1

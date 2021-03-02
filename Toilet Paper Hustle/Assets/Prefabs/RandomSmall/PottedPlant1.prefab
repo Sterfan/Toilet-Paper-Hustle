@@ -141,13 +141,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
+  - name: GrabPlant1
     clip: {fileID: 8300000, guid: 61aed845f78400147b44b93d9b663aaf, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: 
+  - name: GrabPlant2
     clip: {fileID: 8300000, guid: 6992db818503a704a90927b468b2afa4, type: 3}
     volume: 1
     pitch: 1
