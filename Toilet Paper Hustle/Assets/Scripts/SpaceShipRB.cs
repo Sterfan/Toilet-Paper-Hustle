@@ -51,7 +51,7 @@ public class SpaceShipRB : MonoBehaviour
     float lookAcceleration = 10f;
 
     float manboyCooldown = 5f, manboyTimer = 0f;
-    int manboyProb = 30;
+    int manboyProb = 50;
 
     [HideInInspector]
     public float stability = 0.3f, speed = 2.0f;
@@ -233,7 +233,7 @@ public class SpaceShipRB : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.None;
         }
-        if (pickUp.GetComponent<Rigidbody>().mass >= maxMass)
+        if (pickUp.GetComponent<Rigidbody>().mass >= maxMass || pickUp.GetComponent<Rigidbody>().constraints == RigidbodyConstraints.FreezeAll)
         {
             stopRotation = true;
         }
