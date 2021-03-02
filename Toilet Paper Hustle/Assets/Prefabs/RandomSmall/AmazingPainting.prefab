@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2119317008889371618}
   - component: {fileID: 5905423729647414926}
   - component: {fileID: -8256985544315066657}
+  - component: {fileID: 5255333948182389096}
   m_Layer: 0
   m_Name: AmazingPainting
   m_TagString: Hangable
@@ -126,7 +127,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.2990019, z: 2.45}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -11.261345, y: -1.577919, z: 20.758621}
+  m_ConnectedAnchor: {x: -68.99991, y: 5.314418, z: 49.855885}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -173,3 +174,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropped: 0
+  fruit: 0
+--- !u!114 &5255333948182389096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663555220077266114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: f1c9fe6c44ed1b04f9da30023c66d7cc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 2
+  cooldown: 2

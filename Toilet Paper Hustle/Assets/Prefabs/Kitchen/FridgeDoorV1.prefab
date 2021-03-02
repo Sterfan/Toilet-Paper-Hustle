@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4824889889229602322}
   - component: {fileID: 4509487960826686030}
   - component: {fileID: 4202358671684461512}
+  - component: {fileID: 3364037148234770589}
   m_Layer: 6
   m_Name: FridgeDoorV1
   m_TagString: Door
@@ -163,3 +164,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3364037148234770589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2799911162569316469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: f5e61020f6a98834db7c0a9bd762ac72, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 3

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6990753534294149049}
   - component: {fileID: 492438372872616764}
   - component: {fileID: 8666452514815044364}
+  - component: {fileID: 59775609972671257}
   m_Layer: 0
   m_Name: Closed2DoorSinkCounter
   m_TagString: Untagged
@@ -185,6 +186,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &59775609972671257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858398767289280883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: e547ad7da1388c84aa48253194dd8074, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 3
+  cooldown: 1
 --- !u!54 &3084487569667782503
 Rigidbody:
   m_ObjectHideFlags: 0

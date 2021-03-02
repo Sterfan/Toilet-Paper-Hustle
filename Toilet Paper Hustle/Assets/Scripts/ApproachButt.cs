@@ -5,20 +5,43 @@ using UnityEngine;
 public class ApproachButt : MonoBehaviour
 {
     public AudioManager audioManager;
-    
+    bool trash = false;
+
+    int trashed = 4;
 
     public int soundID = 0;
 
     private void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        if (gameObject.CompareTag("Bin"))
+        {
+            trash = true;
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (!trash)
         {
-            audioManager.PlaySound(soundID);
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Play sound");
+                audioManager.PlaySound(soundID);
+            }
         }
+        else
+        {
+            if (trashed >= 4)
+            {
+                RandomizeSound();
+            }
+        }
+    }
+
+    void RandomizeSound()
+    {
+        int rand = Random.Range(5, 7);
+        audioManager.PlaySound(rand);
     }
 }
