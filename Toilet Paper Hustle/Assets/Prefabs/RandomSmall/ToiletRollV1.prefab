@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9151706044668509489}
   - component: {fileID: 6787640493325921909}
   - component: {fileID: 3803611923893876813}
+  - component: {fileID: 900603298470478089}
   m_Layer: 0
   m_Name: ToiletRollV1
   m_TagString: Untagged
@@ -113,3 +114,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3390558720134950976, guid: 7f39b22dba8364c47b181fd6cf0fa681, type: 3}
+--- !u!114 &900603298470478089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206208386250923236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: FindingTP
+    clip: {fileID: 8300000, guid: e49b8849f4320b549be8c7231676b8e6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 2
