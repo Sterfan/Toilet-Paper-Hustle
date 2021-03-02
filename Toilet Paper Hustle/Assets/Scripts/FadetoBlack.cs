@@ -48,4 +48,9 @@ public class FadetoBlack : MonoBehaviour
             }
         }
     }
+
+    public void FadeToBlack()
+    {
+        StartCoroutine(FadeBlackOutSquare());
+    }
 }

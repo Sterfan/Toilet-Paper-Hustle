@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8237439170045258576}
   m_Layer: 0
   m_Name: Towel
-  m_TagString: Untagged
+  m_TagString: Towel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ApproachButt : MonoBehaviour
 {
     public AudioManager audioManager;
     SpaceShipRB hand;
-    bool trash = false;
+    public bool trash = false;
 
     public bool destroyOnPlay = false;
 
@@ -35,6 +36,8 @@ public class ApproachButt : MonoBehaviour
                 if (hand.objectTag == "TP")
                 {
                     audioManager.PlaySound(tp);
+                    gameObject.GetComponent<FadetoBlack>().FadeToBlack();
+                    Invoke("RestartScene", 5.0f);
                 }
                 else if (hand.objectTag == "Towel")
                 {
@@ -43,25 +46,35 @@ public class ApproachButt : MonoBehaviour
                 else
                 {
                     audioManager.PlaySound(soundID);
+                    if (destroyOnPlay)
+                    {
+                        gameObject.GetComponent<Collider>().enabled = false;
+                    }
                 }
             }
         }
         else
         {
-            if (trashed >= 4)
+            if (trashed >= 4 && other.tag != "TP")
             {
                 RandomizeSound();
             }
         }
-        if (destroyOnPlay)
-        {
-            gameObject.GetComponent<Collider>().enabled = false;
-        }
+
     }
 
     void RandomizeSound()
     {
-        int rand = Random.Range(5, 7);
-        audioManager.PlaySound(rand);
+        int chanceToPlay = Random.Range(0, 4);
+        if (chanceToPlay == 1)
+        {
+            int rand = Random.Range(5, 7);
+            audioManager.PlaySound(rand);
+        }
+    }
+
+    void RestartScene()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
