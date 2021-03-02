@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3700755159785643576}
   - component: {fileID: 2934966055478805556}
   - component: {fileID: 2954882299725780402}
+  - component: {fileID: 1197416579467907028}
   m_Layer: 0
   m_Name: Open1DoorCounter(Door)
   m_TagString: Door
@@ -163,3 +164,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1197416579467907028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669357182175622713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62260b7d2ba16a44b9bb96915606e813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 8300000, guid: 559b0d7947dcf194e8321f3a0f26ce5d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  pickedUp: 0
+  probabilityToPlay: 1
+  cooldown: 3

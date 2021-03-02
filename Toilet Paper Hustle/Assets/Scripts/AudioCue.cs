@@ -6,6 +6,7 @@ public class AudioCue : MonoBehaviour
 {
     public Sound[] sounds;
     AudioManager audioManager;
+    [HideInInspector]
     public bool pickedUp = false;
     bool added = false;
 
@@ -28,6 +29,8 @@ public class AudioCue : MonoBehaviour
             s.source.clip = s.clip;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+            s.source.playOnAwake = s.playOnAwake;
         }
     }
 
@@ -77,11 +80,15 @@ public class AudioCue : MonoBehaviour
     {
         if (checkedProbability)
         {
+            if (tracksPlayed > 0)
+            {
+                sounds[tracksPlayed - 1].source.Stop();
+            }
             Sound s = sounds[tracksPlayed];
             s.source.Play();
             tracksPlayed++;
             timesSincePlayed = 0;
-            if (tracksPlayed > sounds.Length)
+            if (tracksPlayed > sounds.Length - 1)
             {
                 tracksPlayed = 0;
             }

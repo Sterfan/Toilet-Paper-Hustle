@@ -14748,31 +14748,57 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 400e449da357a2c4eae99b3cdf6724a7, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: Mistake
     clip: {fileID: 8300000, guid: cb62963d0f7b67a479beb740c85403e7, type: 3}
     volume: 0.2
     pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: Note 1
     clip: {fileID: 8300000, guid: fd8c621415558a0468c768f3fd7fb1c1, type: 3}
     volume: 0.1
     pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: Note 2
     clip: {fileID: 8300000, guid: 0c61a4b56e2e1db48b2e2195f2b13803, type: 3}
     volume: 0.1
     pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: Note 3
     clip: {fileID: 8300000, guid: 25da8ced7774eda4099057fcf18e9fe3, type: 3}
     volume: 0.1
     pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   - name: Note 4
     clip: {fileID: 8300000, guid: 19e886f35f94eb14ca058234dd7a7afa, type: 3}
     volume: 0.1
     pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: DDLR1000
+    clip: {fileID: 8300000, guid: 4217029ace4f011468b6ea99e5b860c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: DDLRLose
+    clip: {fileID: 8300000, guid: 25e80d0388549f9408c9323e9404f1cf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
 --- !u!4 &2063500529
 Transform:
