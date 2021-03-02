@@ -71,7 +71,7 @@ MonoBehaviour:
   deadZoneX: 160
   deadZoneY: 90
   slowSpeed: 40
-  range: 5
+  range: 7
   stability: 1
   speed: 3
   maxMass: 40
@@ -388,7 +388,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e5f2dbca1d2a3c46aa6ecc8388d9ee9, type: 2}
+  - {fileID: 2100000, guid: ab27b46ce6cc16047abc5c01e02b2a63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
