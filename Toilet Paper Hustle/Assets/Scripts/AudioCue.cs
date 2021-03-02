@@ -84,6 +84,10 @@ public class AudioCue : MonoBehaviour
             {
                 sounds[tracksPlayed - 1].source.Stop();
             }
+            else
+            {
+                sounds[sounds.Length - 1].source.Stop();
+            }
             Sound s = sounds[tracksPlayed];
             s.source.Play();
             tracksPlayed++;

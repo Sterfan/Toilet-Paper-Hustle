@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - Hangable
   - Bin
+  - TP
+  - Towel
   layers:
   - Default
   - TransparentFX

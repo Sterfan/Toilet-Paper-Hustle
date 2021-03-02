@@ -53,7 +53,7 @@ public class SpaceShipRB : MonoBehaviour
     float lookAcceleration = 10f;
 
     float manboyCooldown = 5f, manboyTimer = 0f;
-    int manboyProb = 50;
+    int manboyProb = 100;
 
     [HideInInspector]
     public float stability = 0.3f, speed = 2.0f;
@@ -112,6 +112,8 @@ public class SpaceShipRB : MonoBehaviour
 
             Interact();
             CheckForDDLR();
+            InputForRestart();
+            InputForQuit();
         }
 
         if (DDLR)
@@ -260,6 +262,7 @@ public class SpaceShipRB : MonoBehaviour
         {
             pickedUpObject.GetComponent<AudioCue>().pickedUp = false;
         }
+        objectTag = null;
         SetBaseConstraints();
         Destroy(joint);
         animator.SetBool("Grab", false);
@@ -356,5 +359,19 @@ public class SpaceShipRB : MonoBehaviour
         }
     }
 
+    void InputForRestart()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
+    }
 
+    void InputForQuit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
