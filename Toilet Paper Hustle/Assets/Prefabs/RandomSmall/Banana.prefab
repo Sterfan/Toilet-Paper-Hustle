@@ -241,6 +241,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    playOnAwake: 0
     source: {fileID: 0}
   pickedUp: 0
   probabilityToPlay: 3
