@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4212967817567760168
+--- !u!1 &1428259078380787581
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3547894517815784850}
-  - component: {fileID: 473859624856468023}
-  - component: {fileID: 2411549613097537277}
-  - component: {fileID: 878955667914047031}
-  - component: {fileID: 7025273711273520593}
+  - component: {fileID: 1772697225909849543}
+  - component: {fileID: 3401969418302014050}
+  - component: {fileID: 635797412089345704}
+  - component: {fileID: 4767665897753795898}
+  - component: {fileID: 3380044140274959235}
   m_Layer: 0
-  m_Name: LargeCanV1
+  m_Name: FridgeWireV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3547894517815784850
+--- !u!4 &1772697225909849543
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212967817567760168}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 21.682331, y: 10.735664, z: -1.6963935}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1428259078380787581}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.13, y: 8.19, z: -4.59}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &473859624856468023
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!33 &3401969418302014050
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212967817567760168}
-  m_Mesh: {fileID: 2534964839176971238, guid: b7c3a23624a05db4e9a20c4ae7eac921, type: 3}
---- !u!23 &2411549613097537277
+  m_GameObject: {fileID: 1428259078380787581}
+  m_Mesh: {fileID: 8846963094818383277, guid: f5197ab9cf2529046a5e1105219b5fdf, type: 3}
+--- !u!23 &635797412089345704
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212967817567760168}
+  m_GameObject: {fileID: 1428259078380787581}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: b7c3a23624a05db4e9a20c4ae7eac921, type: 3}
+  - {fileID: -876546973899608171, guid: f5197ab9cf2529046a5e1105219b5fdf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,13 +83,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &878955667914047031
+--- !u!65 &4767665897753795898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428259078380787581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.2123294, y: 4.5665445, z: 0.11200487}
+  m_Center: {x: 0, y: 0, z: 0.078484856}
+--- !u!54 &3380044140274959235
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212967817567760168}
+  m_GameObject: {fileID: 1428259078380787581}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -99,16 +112,3 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &7025273711273520593
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4212967817567760168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2.3520622}
-  m_Center: {x: 0, y: 0, z: 1.1877913}
